@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; style-src &#x27;sha256-fjsB81P2g7i3EqRdZ72sGEpQnG5DwyHDa8w56+y0sbE=&#x27;; script-src &#x27;sha256-bHxH9xlSEcUqgO+yXdLWcaT9QES71sz2KXdWUp6ETPE=&#x27;; img-src data:; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; style-src &#x27;sha256-FFVDZ8GwfcMy+TIt7ZilsX05jFfQxDgvjPU7GJClk9E=&#x27;; script-src &#x27;sha256-bHxH9xlSEcUqgO+yXdLWcaT9QES71sz2KXdWUp6ETPE=&#x27;; img-src data:; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
 <meta name="referrer" content="no-referrer">
 <title>Stark: the whole of it</title>
 <meta name="description" content="Every Stark product, everything it does, and the whole goal, each labelled LIVE, BUILDING or HORIZON.">
@@ -180,6 +180,29 @@ h1{font-size:clamp(2.9rem,11vw,5.6rem);text-transform:uppercase;letter-spacing:.
 @media (prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}.sheet,.panel,.scrim,.chip,.gbody,.tbody,.gc::after,.tc::after{transition:none!important;animation:none!important}
 }
+@media screen{
+:root{--pan:#07090c;--glass:linear-gradient(180deg,#E9EDF212,#E9EDF208),#07090c;--edge:#E9EDF21a;--lift:0 1px 0 #E9EDF212 inset,0 18px 50px -26px #9CC4FF24,0 30px 70px -34px #000;--wat:cubic-bezier(.22,.8,.24,1)}
+.top{background:#000000f2;-webkit-backdrop-filter:none;backdrop-filter:none}
+.fear{margin:16px 0 0;font-size:.95rem;letter-spacing:.06em;color:var(--ink)}.fear::before{content:"";display:block;width:64px;height:1px;background:var(--acc);margin:0 0 10px}
+.fear+.lead{margin-top:20px}.foot .fear{margin:0 0 14px}.foot .dry{margin:10px 0 0;color:var(--mut)}
+.band::after{background:linear-gradient(90deg,transparent,#9CC4FF59 25%,#9CC4FF59 75%,transparent)}
+.band{overflow:hidden}.band::before{content:"";position:absolute;left:0;bottom:0;width:30%;height:1px;z-index:1;transform:translateX(-100%);background:linear-gradient(90deg,transparent,#D9E8FF,transparent);animation:cur 9s var(--wat) infinite}
+@keyframes cur{0%{transform:translateX(-100%)}55%,100%{transform:translateX(340%)}}
+.chip,.row:hover{border-radius:20px}.chip{border-color:var(--edge);background:var(--glass);box-shadow:var(--lift)}.chip:hover{background:var(--glass);border-color:#9CC4FF59}
+.c-building,.c-horizon{background:var(--glass);border-color:var(--edge)}
+.tile{border-radius:28px;border-color:var(--edge);background:var(--glass);box-shadow:var(--lift)}.tile>summary{border-radius:28px}.tile[open]>summary{border-radius:28px 28px 0 0;border-bottom-color:var(--edge)}
+.pill{border-radius:999px;padding:5px 12px 4px}.soon{border-radius:20px;border-color:var(--edge)}
+.btn{border-radius:999px;padding:0 24px;transition:none}.btn:hover{background:#9CC4FF2a}.btn.solid{background:var(--ink)}.btn.solid:hover{background:#fff}
+.close{border-radius:999px}.sn{border-radius:20px;border-color:var(--edge);background:var(--glass)}.sn:hover{border-color:#9CC4FF59}
+.panel{background:var(--glass);border-top-color:#9CC4FF4d;border-radius:28px 28px 0 0;box-shadow:var(--lift);transform:none;opacity:0;transition:opacity .3s var(--wat)}.sheet:target .panel{transform:none;opacity:1}
+.grab,.shead{background:#07090c}
+.status{border-left:0;border-radius:20px;background:var(--glass);border:1px solid var(--edge);padding:12px 18px}
+.jump nav{border-radius:0 0 20px 20px}.lanesw{border-radius:0 0 20px 20px}
+.gb4{background:none}.caveats,.groups>div{border-radius:0}
+.sheet,.scrim{transition-duration:.3s}
+}
+@media screen and (min-width:821px){.panel{left:auto;border-radius:28px 0 0 28px;border-left-color:#9CC4FF4d;transform:none}.sheet:target .panel{transform:none}}
+@media screen and (prefers-reduced-motion:reduce){.band::before{animation:none;transform:translateX(120%)}.panel,.scrim,.sheet{transition:none!important}}
 @page{margin:14mm}
 @media print{
  :root{color-scheme:light;--bg:#fff;--ink:#000;--mut:#222;--dim:#444;--line:#999;--acc:#000;--pan:#fff;--card:#fff}
@@ -230,6 +253,7 @@ h1{font-size:clamp(2.9rem,11vw,5.6rem);text-transform:uppercase;letter-spacing:.
 <section class="band" aria-labelledby="h-band"><div class="wrap">
 <p class="kick">Stark</p>
 <h1 id="h-band">The whole of Stark.</h1>
+<p class="fear">Do not be afraid.</p>
 <p class="lead">Offline tools people own, protection that does not wait for the network, and a plan to give. Everything is on this page, and every part says whether it is live, building or a horizon.</p>
 <ul class="nums"><li><b data-stat="onsale">19</b><span>products on sale</span></li><li><b data-stat="features">834</b><span>features in what is on sale</span></li><li><b data-stat="trials">18</b><span>free trials in the browser</span></li><li><b data-stat="plug">15</b><span>apps that run with the plug pulled</span></li></ul>
 <p class="subnums" data-stats="paid_once:17 languages:16 lines:6 promises:11">17 paid once, no subscription. 16 screen languages. 6 product lines. 11 promises, each with a test.</p>
@@ -1294,7 +1318,7 @@ steady days, real tasks, and people who stay. Built to be lived in, not passed t
 </div></section>
 </section>
 </main>
-<footer class="foot"><div class="wrap"><p>Built from Stark&#x27;s own files on 2026-11-22. Counts on this page are computed from them. No script loads from outside. Nothing on this page tracks you.</p></div></footer>
+<footer class="foot"><div class="wrap"><p class="fear">Do not be afraid.</p><p>Built from Stark&#x27;s own files on 2026-11-22. Counts on this page are computed from them. No script loads from outside. Nothing on this page tracks you.</p><p class="dry" lang="en">Still here. Still quiet.</p></div></footer>
 
 <script>(function(){var d=document,w=window,last=null,sy=0,inapp=false,cur=null,mq=w.matchMedia('(max-width:820px)');
 function cs(){var h=location.hash.slice(1);try{h=decodeURIComponent(h)}catch(x){}if(!h)return null;var e=d.getElementById(h);return e&&e.classList.contains('sheet')?e:null}
